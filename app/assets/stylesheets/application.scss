@@ -15,3 +15,20 @@
  */
  @import "bootstrap-sprockets";
   @import "bootstrap";
+
+  body {
+    background-image: url("14.jpg");
+    color: white;
+  }
+
+  a {
+    color: white;
+  }
+
+  .outlay {
+    margin: 200px;
+  }
+
+  input {
+    color: black;
+  }
