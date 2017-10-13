@@ -1,10 +1,11 @@
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+
 <div class="row outlay">
   <div class="col-md-10">
     <h1><%= @application.name %></h1>
     <h3><%= @application.url %></h3>
-    <% @events.each do |event| %>
-      <p><%= event[0] %></p>
-    <% end %>
+    <%= pie_chart @events.group(:name).count %>
+ 		<%= line_chart @events.group_by_day(:created_at).count %>
   </div>
   <div class="col-md-2 little">
 
